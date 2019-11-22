@@ -1,7 +1,7 @@
 /*
  * Modulifier || Code released under the UNLICENSE
  * Code under other copyrights & licenses listed below.
- * https://modulifier.web-dev.tools/#responsive;images;list-group;embed;media-object;icons;hidden;positioning;nice-lists;forms;buttons;accessibility;print
+ * https://modulifier.web-dev.tools/#responsive;images;list-group;embed;media-object;icons;hidden;positioning;nice-lists;forms;buttons;print
  */
 
 @-moz-viewport { width: device-width; scale: 1; }
@@ -209,10 +209,6 @@ svg.img-flex {
   width: 100%;
 }
 
-.media {
-  overflow: hidden;
-}
-
 .media-img, .media__img {
   float: left;
 }
@@ -228,14 +224,6 @@ svg.img-flex {
 .media-body, .media__body {
   overflow: hidden;
   min-width: 12em; /* Slightly less than 200px, responsiveness built in */
-}
-
-.icon {
-  display: inline-block;
-  position: relative;
-  background: transparent none no-repeat center center;
-  background-size: contain;
-  vertical-align: middle;
 }
 
 .i-16, .i--16 {
@@ -311,13 +299,6 @@ svg.img-flex {
 .icon-link:focus,
 .icon-link:hover {
   text-decoration: none;
-}
-
-[hidden], .hidden {
-  /* stylelint-disable declaration-no-important */
-  display: none !important;
-  visibility: hidden !important;
-  /* stylelint-enable */
 }
 
 .visually-hidden {
@@ -719,14 +700,6 @@ input::-moz-focus-inner {
   -webkit-appearance: none;
 }
 
-fieldset {
-  padding-left: 0;
-  padding-right: 0;
-
-  border: 0;
-  border-top: 2px solid #666;
-}
-
 legend {
   color: inherit;
   display: table;
@@ -1004,8 +977,7 @@ select {
 
 /* stylelint-disable no-descending-specificity */
 
-button,
-.btn {
+button {
   cursor: pointer;
   display: inline-block;
   margin: 0;
@@ -1109,36 +1081,6 @@ a:focus, [tabindex="0"]:focus {
   outline-offset: 3px;
 }
 
-.skip-links {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.skip-links > li::before {
-  content: none; /* Remove the bullets if nice lists is selected */
-}
-
-.skip-links a,
-.skip-links button {
-  padding: .5em .75em;
-  position: absolute;
-  top: -10em;
-  z-index: 10000; /* To make sure they're always on top */
-  background-color: #000;
-  border: 0;
-  color: #fff;
-  font-size: 1.125rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.skip-links a:focus,
-.skip-links button:focus {
-  outline-offset: 3px;
-  top: 0;
-}
-
 [aria-busy="true"] {
   cursor: progress;
 }
@@ -1168,9 +1110,6 @@ a:focus, [tabindex="0"]:focus {
   page-break-inside: avoid;
 }
 
-@media print {
-
-  /* stylelint-disable declaration-no-important */
 
   .no-print {
     display: none !important;
